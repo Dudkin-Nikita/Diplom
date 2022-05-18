@@ -1,4 +1,3 @@
-C:\Users\user\Documents\Diplom\CarComponents\CarComponents\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\user\Documents\Diplom\CarComponents\CarComponents\bin\Debug\net6.0\appsettings.json
 C:\Users\user\Documents\Diplom\CarComponents\CarComponents\bin\Debug\net6.0\CarComponents.staticwebassets.runtime.json
 C:\Users\user\Documents\Diplom\CarComponents\CarComponents\bin\Debug\net6.0\CarComponents.exe
