@@ -49,13 +49,33 @@ namespace CarComponents.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CarComponents",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Mark = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Model = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Price = table.Column<double>(type: "float", nullable: false),
+                    TitleImagePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CarComponents", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TextFields",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Codeword = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Text = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -171,21 +191,21 @@ namespace CarComponents.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "3CFB3FB9-502D-46EE-A390-56F4A8E0A9C9", "792d32dc-eca9-4bc4-a5ab-167166bb11e4", "admin", "ADMIN" });
+                values: new object[] { "3CFB3FB9-502D-46EE-A390-56F4A8E0A9C9", "225f9d6e-8e4f-4609-a9b8-b0e997902bed", "admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "A6B399DC-1F54-448A-A267-CFA45D3FF03B", 0, "0d434046-d85e-4c13-b525-cdd2eb766ddc", "nikd926@gmail.com", true, false, null, "NIKD926@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEAPL6d59NkEQyxZ9C1lyzMKQUUWbxrxefkCbDFIFKKGvRxpB6f2+qQhEWLlogB1ekg==", null, false, "", false, "admin" });
+                values: new object[] { "A6B399DC-1F54-448A-A267-CFA45D3FF03B", 0, "c393551c-a002-4d84-b4f5-03c94ec2f8db", "nikd926@gmail.com", true, false, null, "NIKD926@GMAIL.COM", "ADMIN", "AQAAAAEAACcQAAAAEGo7mS+gDqRL7B+xAJS5CrB8KnZopPJHRUoh0/7sf78Vb53zDRCJxeHOt7f9VL02Fg==", null, false, "", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "TextFields",
-                columns: new[] { "Id", "Codeword", "Text", "Title" },
+                columns: new[] { "Id", "Codeword", "DateAdded", "Text", "Title" },
                 values: new object[,]
                 {
-                    { new Guid("357bba7c-5344-4ae8-9e01-aa985e7ec4a7"), "PageComponents", "Содержание заполняется администратором", "Комплектующие" },
-                    { new Guid("ae84f8b9-bf23-42d4-953a-e3d861623c51"), "PageIndex", "Содержание заполняется администратором", "Главная" },
-                    { new Guid("b4bca534-f149-4648-bdca-178a051a3b35"), "PageContacts", "Содержание заполняется администратором", "Контакты" }
+                    { new Guid("357bba7c-5344-4ae8-9e01-aa985e7ec4a7"), "PageComponents", new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6948), "Содержание заполняется администратором", "Комплектующие" },
+                    { new Guid("ae84f8b9-bf23-42d4-953a-e3d861623c51"), "PageIndex", new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6883), "Содержание заполняется администратором", "Главная" },
+                    { new Guid("b4bca534-f149-4648-bdca-178a051a3b35"), "PageContacts", new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6976), "Содержание заполняется администратором", "Контакты" }
                 });
 
             migrationBuilder.InsertData(
@@ -249,6 +269,9 @@ namespace CarComponents.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
+
+            migrationBuilder.DropTable(
+                name: "CarComponents");
 
             migrationBuilder.DropTable(
                 name: "TextFields");

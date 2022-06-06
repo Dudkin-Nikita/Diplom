@@ -22,6 +22,47 @@ namespace CarComponents.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("CarComponents.Domain.Entities.CarComponent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mark")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Model")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<string>("TitleImagePath")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CarComponents");
+                });
+
             modelBuilder.Entity("CarComponents.Domain.Entities.TextField", b =>
                 {
                     b.Property<Guid>("Id")
@@ -31,6 +72,9 @@ namespace CarComponents.Migrations
                     b.Property<string>("Codeword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateAdded")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Text")
                         .IsRequired()
@@ -49,6 +93,7 @@ namespace CarComponents.Migrations
                         {
                             Id = new Guid("ae84f8b9-bf23-42d4-953a-e3d861623c51"),
                             Codeword = "PageIndex",
+                            DateAdded = new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6883),
                             Text = "Содержание заполняется администратором",
                             Title = "Главная"
                         },
@@ -56,6 +101,7 @@ namespace CarComponents.Migrations
                         {
                             Id = new Guid("357bba7c-5344-4ae8-9e01-aa985e7ec4a7"),
                             Codeword = "PageComponents",
+                            DateAdded = new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6948),
                             Text = "Содержание заполняется администратором",
                             Title = "Комплектующие"
                         },
@@ -63,6 +109,7 @@ namespace CarComponents.Migrations
                         {
                             Id = new Guid("b4bca534-f149-4648-bdca-178a051a3b35"),
                             Codeword = "PageContacts",
+                            DateAdded = new DateTime(2022, 6, 6, 8, 2, 9, 238, DateTimeKind.Utc).AddTicks(6976),
                             Text = "Содержание заполняется администратором",
                             Title = "Контакты"
                         });
@@ -98,7 +145,7 @@ namespace CarComponents.Migrations
                         new
                         {
                             Id = "3CFB3FB9-502D-46EE-A390-56F4A8E0A9C9",
-                            ConcurrencyStamp = "792d32dc-eca9-4bc4-a5ab-167166bb11e4",
+                            ConcurrencyStamp = "225f9d6e-8e4f-4609-a9b8-b0e997902bed",
                             Name = "admin",
                             NormalizedName = "ADMIN"
                         });
@@ -198,13 +245,13 @@ namespace CarComponents.Migrations
                         {
                             Id = "A6B399DC-1F54-448A-A267-CFA45D3FF03B",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0d434046-d85e-4c13-b525-cdd2eb766ddc",
+                            ConcurrencyStamp = "c393551c-a002-4d84-b4f5-03c94ec2f8db",
                             Email = "nikd926@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "NIKD926@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAPL6d59NkEQyxZ9C1lyzMKQUUWbxrxefkCbDFIFKKGvRxpB6f2+qQhEWLlogB1ekg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGo7mS+gDqRL7B+xAJS5CrB8KnZopPJHRUoh0/7sf78Vb53zDRCJxeHOt7f9VL02Fg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             TwoFactorEnabled = false,

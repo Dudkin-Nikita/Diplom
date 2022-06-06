@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.Bind("Project", new Config());
 
 builder.Services.AddTransient<ITextFieldsRepository, EFTextFieldsRepository>();
+builder.Services.AddTransient<ICarComponentsRepository, EFCarComponentsRepository>();
 builder.Services.AddTransient<DataManager>();
 
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(Config.ConnectionString));

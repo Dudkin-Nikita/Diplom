@@ -9,6 +9,7 @@ namespace CarComponents.Domain
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
         public DbSet<TextField> TextFields { get; set; }
+        public DbSet<CarComponent> CarComponents { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,7 +30,7 @@ namespace CarComponents.Domain
                 Email = "nikd926@gmail.com",
                 NormalizedEmail = "NIKD926@GMAIL.COM",
                 EmailConfirmed = true,
-                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "superpassword"),
+                PasswordHash = new PasswordHasher<IdentityUser>().HashPassword(null, "secretpassword"),
                 SecurityStamp = string.Empty
             });
 

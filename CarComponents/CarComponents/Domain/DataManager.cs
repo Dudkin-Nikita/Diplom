@@ -5,12 +5,12 @@ namespace CarComponents.Domain
     public class DataManager
     {
         public ITextFieldsRepository TextFields { get; set; }
-        //public IServiceItemsRepository ServiceItems { get; set; }
+        public ICarComponentsRepository CarComponents { get; set; }
 
-        public DataManager(ITextFieldsRepository textFieldsRepository)
+        public DataManager(ITextFieldsRepository textFieldsRepository, ICarComponentsRepository carComponentsRepository)
         {
             TextFields = textFieldsRepository;
-            //ServiceItems = serviceItemsRepository;
+            CarComponents = carComponentsRepository;
         }
 
     }
