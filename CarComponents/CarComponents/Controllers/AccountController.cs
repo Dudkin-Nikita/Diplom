@@ -19,13 +19,13 @@ namespace CarComponents.Controllers
         [AllowAnonymous]
         public IActionResult Login(string returnUrl)
         {
-            //ViewBag.ReturnUrl = returnUrl;
-            return View(new LoginViewModel { ReturnUrl = returnUrl });
+            ViewBag.ReturnUrl = returnUrl;
+            return View(new LoginViewModel());
         }
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (ModelState.IsValid)
             {
@@ -36,7 +36,7 @@ namespace CarComponents.Controllers
                     Microsoft.AspNetCore.Identity.SignInResult result = await signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
                     if (result.Succeeded)
                     {
-                        return Redirect(model.ReturnUrl ?? "/");
+                        return Redirect(returnUrl ?? "/");
                     }
                 }
                 ModelState.AddModelError(nameof(LoginViewModel.UserName), "Неверный логин или пароль");

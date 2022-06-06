@@ -15,7 +15,5 @@ namespace CarComponents.Models
 
         [Display(Name = "Запомнить меня?")]
         public bool RememberMe { get; set; }
-
-        public string ReturnUrl { get; set; } = null;
     }
 }
