@@ -7,7 +7,7 @@ namespace CarComponents.Domain.Entities
         [Display(Name="Название комплектующего")]
         public string Name { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "Заполните тип услуги")]
+        [Required(ErrorMessage = "Заполните тип комплектующего")]
         [Display(Name = "Тип комплектующего")]
         public string Type { get; set; } = string.Empty;
 

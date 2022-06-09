@@ -19,13 +19,12 @@ namespace CarComponents.Controllers
         [AllowAnonymous]
         public IActionResult Login(string returnUrl)
         {
-            ViewBag.ReturnUrl = returnUrl;
+            ViewBag.returnUrl = returnUrl;
             return View(new LoginViewModel());
         }
-
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl)
+        public async Task<IActionResult> Login(LoginViewModel model, string? returnUrl="/admin")
         {
             if (ModelState.IsValid)
             {
@@ -41,9 +40,10 @@ namespace CarComponents.Controllers
                 }
                 ModelState.AddModelError(nameof(LoginViewModel.UserName), "Неверный логин или пароль");
             }
-            return View();
+            return View(model);
         }
 
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();

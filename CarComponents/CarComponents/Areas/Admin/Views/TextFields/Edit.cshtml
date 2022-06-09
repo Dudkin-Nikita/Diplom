@@ -9,6 +9,7 @@
     <div>
         <form asp-area="Admin" asp-controller="TextFields" asp-action="Edit" method="post" enctype="multipart/form-data">
             <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="DateAdded" />
             <input type="hidden" asp-for="Codeword" />
 
             <div asp-validation-summary="All"></div>

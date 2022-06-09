@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KgmMCrIzcwGEc/8/NWGcyNR7ldNtHxbA0ySV0Gh5QG8=",
+  "Hash": "1x3AYwL/bLOI3W8hyRqkz/d64+VipjU3rgHm6KL9GR4=",
   "Source": "CarComponents",
   "BasePath": "_content/CarComponents",
   "Mode": "Default",
@@ -270,6 +270,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pic6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\images\\Рисунок 1.1.PNG",
+      "SourceId": "CarComponents",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\",
+      "BasePath": "_content/CarComponents",
+      "RelativePath": "images/Рисунок 1.1.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Рисунок 1.1.PNG"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\js\\breakpoints.min.js",
