@@ -1,0 +1,11 @@
+﻿@model IQueryable<CarComponent>
+
+<div>
+    @if (Model.Any())
+    {
+        @foreach(CarComponent car in Model)
+        {
+            <h3>@car.Name</h3>
+        }
+    }
+</div>

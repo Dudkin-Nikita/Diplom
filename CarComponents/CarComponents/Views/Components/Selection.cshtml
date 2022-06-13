@@ -1,0 +1,45 @@
+﻿@model CarComponentModel
+@{
+    string strTitle = "Подбор комплектующих";
+    ViewBag.Title = strTitle;
+}
+
+<div>
+    <h2>@ViewBag.Title</h2>
+    <div>
+        <form asp-area="" asp-controller="Components" asp-action="SelectionList" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+            <div class="div-box">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Type"></label>
+                <input asp-for="Type" />
+                <span asp-validation-for="Type"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Mark"></label>
+                <input asp-for="Mark" />
+                <span asp-validation-for="Mark"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="Model"></label>
+                <input asp-for="Model" />
+                <span asp-validation-for="Model"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="MaxPrice"></label>
+                <input asp-for="MaxPrice" />
+                <span asp-validation-for="MaxPrice"></span>
+            </div>
+            <div class="div-box">
+                <label asp-for="MinPrice"></label>
+                <input asp-for="MinPrice" />
+                <span asp-validation-for="MinPrice"></span>
+            </div>
+            <input type="submit" value="Подобрать" />
+        </form>
+    </div>
+</div>

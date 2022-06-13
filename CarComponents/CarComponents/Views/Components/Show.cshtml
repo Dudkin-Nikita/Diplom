@@ -1,0 +1,15 @@
+﻿@model CarComponent
+
+<div>
+    <h2>@Model.Name</h2>
+    <h2>@Model.Type</h2>
+    <div>
+        <img class="img-block" src="~/images/@Model.TitleImagePath" />
+    </div>
+</div>
+<div>
+    <h3>@Model.Mark</h3>
+    <h3>@Model.Model</h3>
+    <h3>@Model.Price</h3>
+    @Html.Raw(Model.Description)
+</div>

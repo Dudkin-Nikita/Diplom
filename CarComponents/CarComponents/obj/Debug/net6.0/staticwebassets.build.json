@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1x3AYwL/bLOI3W8hyRqkz/d64+VipjU3rgHm6KL9GR4=",
+  "Hash": "cto+YadDs1sApp2qjkY70gP0QuTFtkF/AggykWmEag8=",
   "Source": "CarComponents",
   "BasePath": "_content/CarComponents",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\images\\bg1.png"
     },
     {
+      "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\images\\BMW 3.png",
+      "SourceId": "CarComponents",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\",
+      "BasePath": "_content/CarComponents",
+      "RelativePath": "images/BMW 3.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\BMW 3.png"
+    },
+    {
       "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\images\\icon-bubble.png",
       "SourceId": "CarComponents",
       "SourceType": "Discovered",
@@ -151,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icon-bubble.png"
+    },
+    {
+      "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\images\\kolodki_mercedes_orig2.jpg",
+      "SourceId": "CarComponents",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\",
+      "BasePath": "_content/CarComponents",
+      "RelativePath": "images/kolodki_mercedes_orig2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kolodki_mercedes_orig2.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\Documents\\Diplom\\CarComponents\\CarComponents\\wwwroot\\images\\mobileUI-site-nav-opener-bg.svg",

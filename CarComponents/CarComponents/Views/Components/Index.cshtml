@@ -1,0 +1,23 @@
+﻿@model IQueryable<CarComponent>
+@{
+    TextField textField = ViewBag.TextField;
+}
+
+<div>
+    @if (Model.Any())
+    {
+        <ul class="big-image-list">
+            @foreach (CarComponent entity in Model)
+            {
+                <li>
+                    <a asp-area="" asp-controller="Components" asp-action="Index" asp-route-id="@entity.Id">
+                        <img src="~/images/@entity.TitleImagePath" alt="" class="left">
+                    </a>
+                    <h4>@entity.Name</h4>
+                    <p>@entity.Type</p>
+                </li>
+            }
+        </ul>
+    }
+</div>
+
