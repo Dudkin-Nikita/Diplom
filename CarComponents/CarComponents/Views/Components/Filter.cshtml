@@ -1,0 +1,51 @@
+﻿@model IQueryable<CarComponent>
+@{
+    string strTitle = "Фильтр";
+    ViewBag.Title = strTitle;
+}
+
+<div>
+    <h2>@ViewBag.Title</h2>
+    <div>
+        <form asp-area="" asp-controller="Components" asp-action="FilterList" method="post" enctype="multipart/form-data">
+            <div class="div-box">
+                <label for="type">Выберите фильтр</label>
+            </div>
+            <div class="div-box">
+                <p>
+                    <select name="type">
+                        <option value="Name">Название</option>
+                        <option value="Type">Тип</option>
+                        <option value="Mark">Марка</option>
+                        <option value="Model">Модель</option>
+                    </select>
+                </p>
+            </div>
+            <div class="div-box">
+                <label for="component">Введите данные</label>
+                <input name="component" />
+            </div>
+            <p>
+                <input type="submit" value="Фильтр" />
+            </p>
+        </form>
+    </div>
+    
+    <div>
+        @if (Model.Any())
+        {
+            <ul class="big-image-list">
+                @foreach (CarComponent entity in Model)
+                {
+                    <li>
+                        <a asp-area="" asp-controller="Components" asp-action="Index" asp-route-id="@entity.Id">
+                            <img src="~/images/@entity.TitleImagePath" alt="" class="left">
+                        </a>
+                        <h4>@entity.Name</h4>
+                        <p>@entity.Type</p>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+</div>

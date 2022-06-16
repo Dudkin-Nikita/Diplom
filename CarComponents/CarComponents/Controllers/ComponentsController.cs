@@ -59,6 +59,34 @@ namespace CarComponents.Controllers
                 return View(carComponents);
             }
             return RedirectToAction("Selection", "Components");
-    }
+        }
+        public IActionResult Filter()
+        {
+            IQueryable<CarComponent> carComponents = dataManager.CarComponents.GetCarComponents();
+            return View(carComponents);
+        }
+
+        [HttpPost]
+        public IActionResult FilterList(string type, string component)
+        {
+            IQueryable<CarComponent> carComponents = dataManager.CarComponents.GetCarComponents();
+            if (type == "Type")
+            {
+                carComponents = carComponents.Where(c => c.Type.Contains(component));
+            }
+            if (type == "Type")
+            {
+                carComponents = carComponents.Where(c => c.Type == component);
+            }
+            if (type == "Mark")
+            {
+                carComponents = carComponents.Where(c => c.Mark == component);
+            }
+            if (type == "Model")
+            {
+                carComponents = carComponents.Where(c => c.Model == component);
+            }
+            return View(carComponents);
+        }
     }
 }

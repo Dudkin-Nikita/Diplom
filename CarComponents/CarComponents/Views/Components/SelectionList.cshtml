@@ -2,10 +2,18 @@
 
 <div>
     @if (Model.Any())
-    {
-        @foreach(CarComponent car in Model)
         {
-            <h3>@car.Name</h3>
+            <ul class="big-image-list">
+                @foreach (CarComponent entity in Model)
+                {
+                    <li>
+                        <a asp-area="" asp-controller="Components" asp-action="Index" asp-route-id="@entity.Id">
+                            <img src="~/images/@entity.TitleImagePath" alt="" class="left">
+                        </a>
+                        <h4>@entity.Name</h4>
+                        <p>@entity.Type</p>
+                    </li>
+                }
+            </ul>
         }
-    }
 </div>

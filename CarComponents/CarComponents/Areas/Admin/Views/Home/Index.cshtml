@@ -8,8 +8,8 @@
     <h2>@ViewBag.Title</h2>
     <div>
         <h3>Комплектующие</h3>
-        <div class="div-box">
-            <a asp-area="Admin" asp-controller="CarComponents" asp-action="Edit" asp-route-id="">Добавить комплектующее</a>
+        <div class="div-box">           
+            <p><a asp-area="Admin" asp-controller="CarComponents" asp-action="Edit" asp-route-id="">Добавить комплектующее</a></p>
         </div>
         @if (Model.Any())
         {
@@ -33,10 +33,11 @@
         }
     </div>
     <div class="div-box">
-        <h3>Редактировать страницы сайта</h3>
+        <p><h3>Редактировать страницы сайта</h3></p>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageIndex">Главная</a>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageComponents">Комплектующие</a>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord="PageContacts">Контакты</a>
+        <br />
     </div>
     <div class="div-box">
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
